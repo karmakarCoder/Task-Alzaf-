@@ -6,7 +6,13 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
+      fontFamily: {
+        inter: ["var(--font-inter)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

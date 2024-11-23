@@ -3,19 +3,68 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --inter: var(--inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply m-0 p-0 outline-none box-border font-inter;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  img,
+  a,
+  li,
+  ul,
+  ol,
+  div {
+    @apply m-0 p-0;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  li {
+    @apply list-none;
+  }
+  img {
+    @apply align-middle;
   }
 }
+@layer components {
+  .my-slide {
+    height: 392px !important;
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .my-slide .splide__track {
+    height: 100% !important;
+    width: 100%;
+  }
+
+  .my-slide .splide__pagination {
+    bottom: 1.5em !important;
+  }
+
+  .my-slide .splide__pagination__page.is-active {
+    background: #f97316 !important;
+    transform: scale(1.2);
+  }
+
+  .my-slide .splide__pagination__page {
+    background: #d9d9d9 !important;
+    width: 10px;
+    height: 10px;
+  }
+
+  .my-slide .splide__pagination {
+    column-gap: 5px;
+  }
 }
